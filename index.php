@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+      
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="style/main.css" />  
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style media="screen">
+       
+    </style>
+
+    <title>Sole Lab &#124; Home</title>
+  </head>
+  <body>
+    <div id="main">
+    
+        <div class="top-notification">
+          Free shipping on all orders above <span>&#36;100</span> <i class="fas fa-window-close close-btn"></i>
+        </div>
+        <header>
+            <nav class="mobile-screen navbar navbar-expand-lg navbar-light bg-light">
+                  <a class="navbar-brand" href="index.php"><img src="images/logo.png" width="120px;"></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+            </nav>
+            <nav class="large-screen">
+            <div class="container">
+              <div class="row">
+                <div class="col-md nav-link nav-link-l">
+                    <a href="index.php">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="col-md nav-link nav-link-c">
+                  <a href="index.php" class="logo"><img src="images/logo.png" width="120px"></a>
+                </div>
+                <div class="col-md nav-link nav-link-r">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fas fa-shopping-bag" onclick="openSidePanel()"></i></a>
+                    <a href="#"><i class="far fa-user-circle"></i></a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <div class="shopping-menu">
+                <a href="#">Sale</a>
+                <a href="#">Sneakers</a>
+                <a href="#">Boots</a>
+                <a href="#">Casual Shoes</a>
+                <a href="#">Luxury Sneakers</a>
+        </div>
+        <div class="main-content">
+            <div class="slider-wrap">
+<!--                <span class="slick-arrows left-arrow">left</span>-->
+                    <div class="slider">
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div>
+<!--                <span class="slick-arrows right-arrow">right</span>-->
+            </div>
+            
+            <div class="container home-grid">
+                <h1>New Ins</h1>
+                <div class="row">
+                    <a href="product1.php">
+                    <div class="col-md">
+                            <span class="thumb-price">&#36;280</span>
+                            <img class="thumbnail" src="images/4.jpeg">
+                            <p class="title">React Element 87 &#39;Light Bone&#39;</p>
+                    </div>
+                    </a>    
+                    <a href="product2.php">
+                    <div class="col-md">
+                        <span class="thumb-price">&#36;140</span>
+                        <img class="thumbnail" src="images/7.jpeg">
+                        <p class="title">React Element 87 &#39;Solar Red&#39;</p>
+                    </div>
+                    </a>    
+                    <a href="product3.php">
+                    <div class="col-md">
+                        <span class="thumb-price">&#36;200</span>
+                        <img class="thumbnail" src="images/1.jpeg">
+                        <p class="title">React Element 87 &#39;Anthracite&#39;</p>
+                    </div>
+                    </a>    
+                </div>
+            </div>
+        </div>
+<!--        <footer></footer>-->
+    </div>
+      
+    <div class="shopping-cart cartPanel" id="sidePanel">
+        <i class="fas fa-window-close" onclick="closeSidePanel()"></i>
+        
+        
+        <p class="cart-status"><i class="fas fa-shopping-bag"></i><br>Your cart is empty</p>
+        <div class="cart-bottom">
+        <p>Sub-total&#58;</p>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+      $('.close-btn').click(function(){
+        $('.top-notification').addClass("hide");
+      });
+    </script>
+    
+    <!--Cart slide in/out-->  
+    <script>
+        function openSidePanel() {
+            document.getElementById("sidePanel").style.width = "300px";
+            document.getElementById("main").style.marginRight = "300px";
+            document.getElementById("main").style.opacity= "0.5";
+        }
+
+        function closeSidePanel() {
+            document.getElementById("sidePanel").style.width = "0";
+            document.getElementById("main").style.marginRight= "0";
+            document.getElementById("main").style.opacity= "1";
+        }
+    </script>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+    <!--Slick slider-->  
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script> 
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                arrows:false, 
+                autoplay: true,
+                dots:true,
+                autoplaySpeed:2000
+
+          });  
+//        $('.left-arrow').click(function(){
+//          $('.slider').slick('slickPrev');
+//        });
+//
+//        $('.right-arrow').click(function(){
+//          $('.slider').slick('slickNext');
+//        });   
+        });
+    </script>  
+        
+  </body>
+</html>
